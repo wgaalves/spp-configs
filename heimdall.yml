@@ -1,0 +1,23 @@
+security:
+  oauth2:
+    client:
+      clientId: heimdall
+      clientSecret: ${HEIMDALL_PASSWORD}
+      accessTokenUri: http://auth-service:8083/uaa/oauth/token
+      grant-type: client_credentials
+      scope: server
+
+spring:
+  data:
+    mongodb:
+      host: heimdall-mongodb
+      username: user
+      password: ${MONGODB_PASSWORD}
+      database: heimdall
+      port: 27017
+
+server:
+  servlet:
+    context-path: /heimdall
+  port: 8084
+
