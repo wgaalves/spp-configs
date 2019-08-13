@@ -1,3 +1,8 @@
+server:
+  servlet:
+    context-path: /heimdall
+  port: 8086
+  
 eureka:
   instance:
     hostname: localhost
@@ -18,12 +23,6 @@ spring:
       password: mongo
       database: heimdall
       port: 27017
-
-server:
-  servlet:
-    context-path: /heimdall
-  port: 8086
-
 feign:
   hystrix:
     enabled: true
