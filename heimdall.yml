@@ -13,7 +13,7 @@ wait-time-in-ms-when-sync-empty: 3000
 spring:
   data:
     mongodb:
-      host: mongodb-heimdall
+      host: localhost
       username: mongo
       password: mongo
       database: heimdall
