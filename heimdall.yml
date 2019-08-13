@@ -10,14 +10,14 @@ security:
 spring:
   data:
     mongodb:
-      host: heimdall-mongodb
-      username: user
-      password: ${MONGODB_PASSWORD}
+      host: mongodb-heimdall
+      username: mongo
+      password: mongo
       database: heimdall
       port: 27017
 
 server:
   servlet:
     context-path: /heimdall
-  port: 8084
+  port: 8086
 
