@@ -1,11 +1,14 @@
-security:
-  oauth2:
-    client:
-      clientId: heimdall
-      clientSecret: ${HEIMDALL_PASSWORD}
-      accessTokenUri: http://auth-service:8083/uaa/oauth/token
-      grant-type: client_credentials
-      scope: server
+eureka:
+  instance:
+    hostname: localhost
+    port: 8082
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+  server:
+wait-time-in-ms-when-sync-empty: 3000
 
 spring:
   data:
@@ -20,4 +23,8 @@ server:
   servlet:
     context-path: /heimdall
   port: 8086
+
+feign:
+  hystrix:
+    enabled: true
 
