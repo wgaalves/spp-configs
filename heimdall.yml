@@ -19,8 +19,8 @@ spring:
   data:
     mongodb:
       host: localhost
-      username: mongo
-      password: mongo
+      username: heimdall
+      password: heimdall
       database: heimdall
       port: 27017
 feign:
