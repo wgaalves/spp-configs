@@ -2,10 +2,10 @@ server:
   servlet:
     context-path: /heimdall
   port: 8086
-  
+
 eureka:
   instance:
-    hostname: localhost
+    hostname: discovery-service
     port: 8082
   client:
     registerWithEureka: true
