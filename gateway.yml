@@ -9,7 +9,7 @@ hystrix:
 ribbon:
   ReadTimeout: 20000
   ConnectTimeout: 20000
-  
+
 eureka:
   instance:
     hostname: discovery-service
@@ -32,7 +32,7 @@ zuul:
   routes:
     discovery-service:
         path: /eureka/**
-        serviceId: discovery-service
+        url: http://discovery-service:8082
         stripPrefix: false
         sensitiveHeaders:
     monitoring-service:
