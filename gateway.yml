@@ -32,7 +32,7 @@ zuul:
   routes:
     discovery-service:
         path: /eureka/**
-        url: http://localhost:8082/
+        url: http://config-service:8082/
         serviceId: discovery-service
         stripPrefix: false
 
