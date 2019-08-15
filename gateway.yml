@@ -24,7 +24,7 @@ eureka:
 
 
 zuul:
-  ignoredServices: '*'
+  ignoredServices: *
   host:
     connect-timeout-millis: 20000
     socket-timeout-millis: 20000
@@ -32,19 +32,20 @@ zuul:
   routes:
     discovery-service:
         path: /eureka/**
-        url: http://discovery-service:8082/
+        url: http://localhost:8082/
+        serviceId: discovery-service
         stripPrefix: false
-        sensitiveHeaders:
+
     monitoring-service:
         path: /monitor/**
         serviceId: monitoring-service
         stripPrefix: false
-        sensitiveHeaders:
+
     heimdall:
         path: /heimdall/**
         serviceId: heimdall
         stripPrefix: false
-        sensitiveHeaders:
+
 
 server:
   port: 8000
