@@ -17,12 +17,16 @@ zuul:
     socket-timeout-millis: 20000
 
   routes:
-    auth-service:
-        path: /uaa/**
-        url: http://localhost
+    discovery-service:
+        path: /eureka/**
+        serviceId: discovery-service
         stripPrefix: false
         sensitiveHeaders:
-
+    monitoring-service:
+        path: /hystrix/**
+        serviceId: monitoring-service
+        stripPrefix: false
+        sensitiveHeaders:
     heimdall:
         path: /heimdall/**
         serviceId: heimdall
