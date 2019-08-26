@@ -26,7 +26,6 @@ security:
 spring:
     datasource:
         driver-class-name: com.mysql.jdbc.Driver
-        schema: classpath:/sql/schema.sql
         url: jdbc:mysql://mysql-auth/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false
         username: root
         password: root
