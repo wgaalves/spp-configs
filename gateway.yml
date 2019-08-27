@@ -32,19 +32,14 @@ eureka:
     discovery-service:
         path: /eureka/**
         serviceId: discovery-service
-        stripPrefix: false
 
     auth-service:
       path: /uaa/** 
-      serviceId: heimdall
-      stripPrefix: false
-      sensitiveHeaders:
+      serviceId: auth-service
 
     heimdall:
         path: /heimdall/**
         serviceId: heimdall
-        stripPrefix: false
-        sensitiveHeaders:
 
 
 server:
