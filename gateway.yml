@@ -31,21 +31,20 @@ eureka:
   routes:
     discovery-service:
         path: /eureka/**
-        url: http://localhost:8082/
         serviceId: discovery-service
         stripPrefix: false
 
     auth-service:
       path: /uaa/** 
-      url: localhost:9000 
+      serviceId: heimdall
       stripPrefix: false
       sensitiveHeaders:
 
     heimdall:
-        url: localhost
         path: /heimdall/**
         serviceId: heimdall
         stripPrefix: false
+        sensitiveHeaders:
 
 
 server:
