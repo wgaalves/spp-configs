@@ -18,7 +18,7 @@ zuul:
 
 eureka:
   instance:
-    hostname: discovery-service
+    hostname: localhost
     port: 8082
   client:
     registerWithEureka: true
@@ -31,17 +31,18 @@ eureka:
   routes:
     discovery-service:
         path: /eureka/**
-        url: http://discovery-service:8082/
+        url: http://localhost:8082/
         serviceId: discovery-service
         stripPrefix: false
 
     auth-service:
       path: /uaa/** 
-      url: http://localhost:9000 
+      url: localhost:9000 
       stripPrefix: false
       sensitiveHeaders:
 
     heimdall:
+        url: localhost
         path: /heimdall/**
         serviceId: heimdall
         stripPrefix: false
