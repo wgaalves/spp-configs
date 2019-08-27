@@ -28,3 +28,7 @@ spring:
     mongodb:
       uri: mongodb+srv://heimdall:heimdall@heimdall-ikxkk.mongodb.net/test
       database: heimdall-auth
+
+server:
+  servlet:
+    context-path: /uaa
