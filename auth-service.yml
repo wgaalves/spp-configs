@@ -4,14 +4,13 @@ server:
   port: 9000
 
 eureka:
-  instance:
-    hostname: discovery-service
-    port: 8082
   client:
     registerWithEureka: true
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+      defaultZone: http://discovery-service:8082/eureka/
+  instance:
+    status-page-url: http://localhost:9000    
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
