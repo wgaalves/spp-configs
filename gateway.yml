@@ -20,5 +20,10 @@ zuul:
       stripPrefix: false
       sensitiveHeaders:
 
+    discovery-service:
+      path: /eureka/** 
+      url: discovery-service 
+      stripPrefix: false 
+      sensitiveHeaders:
 server:
   port: 8000
