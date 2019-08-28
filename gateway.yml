@@ -1,11 +1,3 @@
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 20000
-
 ribbon:
   ReadTimeout: 20000
   ConnectTimeout: 20000
@@ -15,37 +7,18 @@ zuul:
   host:
     connect-timeout-millis: 20000
     socket-timeout-millis: 20000
-
-eureka:
-  instance:
-    hostname: discovery-service
-    port: 8082
-  client:
-    registerWithEureka: true
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
-  server:
-    wait-time-in-ms-when-sync-empty: 3000
-
   routes:
-    discovery-service:
-        path: /eureka/**
-        serviceId: discovery-service
-        stripPrefix: false
-
     auth-service:
-        path: /uaa/** 
-        serviceId: auth-service  
-        stripPrefix: false
-        sensitiveHeaders:
+      path: /uaa/** 
+      url: auth-service 
+      stripPrefix: false 
+      sensitiveHeaders:
 
-    heimdall:
-        path: /heimdall/**
-        serviceId: heimdall
-        stripPrefix: false
-
+    account-service:
+      path: /accounts/**
+      serviceId: account-service
+      stripPrefix: false
+      sensitiveHeaders:
 
 server:
   port: 8000
-

@@ -3,15 +3,6 @@ server:
     context-path: /heimdall
   port: 8086
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    server:
-      waitTimeInMsWhenSyncEmpty: 0
-
 spring:
   data:
     mongodb:
