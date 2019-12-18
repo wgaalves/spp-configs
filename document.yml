@@ -1,0 +1,17 @@
+server:
+  servlet:
+    context-path: /document
+  port: 8083
+
+#spring:
+#  data:
+#    mongodb:
+#      host: mongo-heimdall
+#      username: heimdall
+#      password: heimdall
+#      database: heimdall
+#      port: 27017
+feign:
+  hystrix:
+    enabled: true
+

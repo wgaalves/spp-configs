@@ -4,13 +4,13 @@ eureka:
     prefer-ip-address: false
   client:
     serviceUrl:
-      defaultZone: http://discovery-service:8082/eureka/
+      defaultZone: http://localhost:8082/eureka/
 
-security:
-  oauth2:
-    resource:
-      user-info-uri: http://auth-service:9000/uaa/user/current
-      token-info-uri: http://auth-service:9000/uaa/oauth/check_token
+#security:
+#  oauth2:
+#    resource:
+#      user-info-uri: http://auth-service:9000/uaa/user/current
+#      token-info-uri: http://auth-service:9000/uaa/oauth/check_token
 
 logging:
   level:
