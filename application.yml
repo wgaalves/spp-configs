@@ -11,6 +11,8 @@ eureka:
 #    resource:
 #      user-info-uri: http://auth-service:9000/uaa/user/current
 #      token-info-uri: http://auth-service:9000/uaa/oauth/check_token
+zipkin:
+  base-url: http://zipkin:9411
 
 logging:
   level:
