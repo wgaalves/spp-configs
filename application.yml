@@ -4,7 +4,7 @@ eureka:
     prefer-ip-address: false
   client:
     serviceUrl:
-      defaultZone: http://discovery:8082/eureka/
+      defaultZone: http://localhost:8080/eureka/
 
 #security:
 #  oauth2:
@@ -12,10 +12,10 @@ eureka:
 #      user-info-uri: http://auth-service:9000/uaa/user/current
 #      token-info-uri: http://auth-service:9000/uaa/oauth/check_token
 zipkin:
-  base-url: http://zipkin:9411
+  base-url: http://localhost:9411
 
 logging:
-  level:
+  level
     org.springframework.security: DEBUG
 
 hystrix:
